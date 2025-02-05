@@ -1,24 +1,40 @@
-// 88. Merge Sorted Array
-function MergeSortedArray88(nums1, nums2, m, n) {
-  nums1.length = m + n
+// //88. Merge Sorted Array
+// var merge = function (nums1, m, nums2, n) {
+//   let i = m - 1 //2 duzina regularnih clanova niza1
+//   let j = n - 1 //2 duzina niza2
+//   let k = m + n - 1 //5 duzina niza1
 
-  let j = 0
-  for (let i = 0; i < n; i++) {
-    if (nums1[j] < nums2[i]) {
-      nums1.push(nums2[i])
-      j++
-      break
-    } else if (nums1[j] === nums2[i]) {
-      nums1.push(nums2[i])
-      j++
-      break
-    } else if (nums1[j] > nums2[i]) {
-      nums1.splice(j - 1, 0, nums2[i])
-      j++
-      break
+//   //m elemnit niz1 koji se trebaju sppojiti,n elementi niza2,n+m velicina niza1
+//   while (j >= 0) {
+//     if (i >= 0 && nums1[i] > nums2[j]) {
+//       nums1[k] = nums1[i]
+//       i--
+//     } else {
+//       nums1[k] = nums2[j]
+//       j--
+//     }
+//     k--
+//   }
+//   console.log("Array:", nums1)
+// }
+
+// merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
+
+//27. Remove Element
+var removeElement = function (nums, val) {
+  // val - element kojeg treba ukloniti iz niza,koliko god da ih ima
+  // nums - niz
+
+  j = nums.length
+  for (let i = 0; i < j; i++) {
+    if (nums[i] === val) {
+      nums.splice(i, 1)
+      i--
     }
   }
-  console.log("Merged arrays", nums1)
+
+  let k = nums.length
+  return k
 }
 
-MergeSortedArray88([1, 2, 3, 0, 0, 0], [2, 5, 6], 3, 3)
+removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)
