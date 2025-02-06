@@ -20,21 +20,41 @@
 
 // merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
 
-//27. Remove Element
-var removeElement = function (nums, val) {
-  // val - element kojeg treba ukloniti iz niza,koliko god da ih ima
-  // nums - niz
+// //27. Remove Element
+// var removeElement = function (nums, val) {
+//   // val - element kojeg treba ukloniti iz niza,koliko god da ih ima
+//   // nums - niz
 
-  j = nums.length
-  for (let i = 0; i < j; i++) {
-    if (nums[i] === val) {
-      nums.splice(i, 1)
-      i--
-    }
-  }
+//   j = nums.length
+//   for (let i = 0; i < j; i++) {
+//     if (nums[i] === val) {
+//       nums.splice(i, 1)
+//       i--
+//     }
+//   }
 
-  let k = nums.length
-  return k
-}
+//   let k = nums.length
+//   return k
+// }
 
-removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)
+// removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)
+
+// 26. Remove Duplicates from Sorted Array
+// var removeDuplicates = function (nums) {
+//   let j = 1
+//   for (let i = 1; i < nums.length; i++) {
+//     if (nums[i] !== nums[i - 1]) {
+//       nums[j] = nums[i]
+//       j++
+//     }
+//   }
+//   return j
+// }
+
+// // removeDuplicates([1, 1, 2])
+
+// let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+// let k = removeDuplicates(nums)
+// console.log(nums)
+// console.log(nums.slice(0, k)) // Treba da ispise: [1, 2]
+// console.log("Broj unikatnih elemenata:", k)
