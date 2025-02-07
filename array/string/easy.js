@@ -58,3 +58,27 @@
 // console.log(nums)
 // console.log(nums.slice(0, k)) // Treba da ispise: [1, 2]
 // console.log("Broj unikatnih elemenata:", k)
+
+//169. Majority Element
+
+var majorityElement = function (nums) {
+  const number = nums.length / 2
+  let j = 0
+  let count = 0
+  let count2 = 0
+  let i
+
+  if (i === nums.length - 1) {
+    j++
+  }
+  for (i = 0; i < nums.length; i++) {
+    if (nums[j] === nums[i]) {
+      count++
+    }
+    console.log(j)
+  }
+
+  //   console.log(j)
+}
+
+majorityElement([1, 2, 3, 4, 5])
